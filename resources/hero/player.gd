@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 	
 	if dir != Vector2.ZERO:
 		last_dir = dir
-		move_and_slide(dir.normalized() * (RUN_SPEED if running else SPEED)).normalized()
+		move_and_slide(dir.normalized() * (RUN_SPEED if running else SPEED))
 	
 	update_anim()
 
