@@ -69,6 +69,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 length = 0.4
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("body:region_rect")
 tracks/0/interp = 0
@@ -80,6 +81,35 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Rect2( 24, 0, 8, 8 ), Rect2( 0, 0, 8, 8 ), Rect2( 8, 0, 8, 8 ), Rect2( 16, 0, 8, 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("trace_pos:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( -1, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "instance_trace"
+}, {
+"args": [  ],
+"method": "instance_trace"
+} ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -96,6 +126,35 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Rect2( 8, 24, 8, 8 ), Rect2( 16, 24, 8, 8 ), Rect2( 24, 24, 8, 8 ), Rect2( 0, 24, 8, 8 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("trace_pos:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.999999, 1 ), Vector2( -0.999999, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "instance_trace"
+}, {
+"args": [  ],
+"method": "instance_trace"
+} ]
+}
 
 [sub_resource type="Animation" id=4]
 length = 0.4
@@ -110,6 +169,35 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Rect2( 8, 16, 8, 8 ), Rect2( 16, 16, 8, 8 ), Rect2( 24, 16, 8, 8 ), Rect2( 0, 16, 8, 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("trace_pos:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "instance_trace"
+}, {
+"args": [  ],
+"method": "instance_trace"
+} ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -126,12 +214,42 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Rect2( 8, 8, 8, 8 ), Rect2( 16, 8, 8, 8 ), Rect2( 24, 8, 8, 8 ), Rect2( 0, 8, 8, 8 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("trace_pos:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1 ), Vector2( 2, 1 ), Vector2( 0, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "instance_trace"
+}, {
+"args": [  ],
+"method": "instance_trace"
+} ]
+}
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 2.0
 
 [node name="player" type="KinematicBody2D"]
 position = Vector2( 58, 37 )
+z_index = 1
 script = ExtResource( 2 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
@@ -149,7 +267,10 @@ anims/walk_up = SubResource( 5 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -3 )
 region_enabled = true
-region_rect = Rect2( 0, 8, 8, 8 )
+region_rect = Rect2( 24, 8, 8, 8 )
 
 [node name="col" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="trace_pos" type="Position2D" parent="."]
+position = Vector2( 2, 1 )

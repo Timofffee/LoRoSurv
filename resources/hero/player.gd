@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const SPEED = 16 #px/sec
-const RUN_SPEED = 32 
+const SPEED = 20 #px/sec
+const RUN_SPEED = 30 
 
 var dir = Vector2.ZERO
 var last_dir = Vector2.RIGHT
@@ -9,6 +9,7 @@ var running = false
 
 onready var anim_player = $anim
 
+var trace_inst = preload('res://resources/trace.tscn')
 
 func _ready() -> void:
 	pass
@@ -29,7 +30,8 @@ func _process(delta: float) -> void:
 		dir.x += 1
 	
 	if dir != Vector2.ZERO:
-		last_dir = move_and_slide(dir.normalized() * (RUN_SPEED if running else SPEED)).normalized()
+		last_dir = dir
+		move_and_slide(dir.normalized() * (RUN_SPEED if running else SPEED)).normalized()
 		
 		
 	
@@ -55,7 +57,14 @@ func update_anim() -> void:
 
 
 func set_anim(anim_name):
-	anim_player.playback_speed = 0.75 if running else 0.3
+	anim_player.playback_speed = 0.9 if running else 0.5
 	if anim_player.current_animation != anim_name:
 		anim_player.play(anim_name)
+
+func instance_trace() -> void:
+	var t = trace_inst.instance()
+	get_parent().add_child(t)
+	t.global_position = $trace_pos.global_position
+	t.global_position.x = int(t.global_position.x)
+	t.global_position.y = int(t.global_position.y)
 
