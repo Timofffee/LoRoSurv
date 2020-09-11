@@ -6,6 +6,7 @@ const RUN_SPEED = 30
 var dir = Vector2.ZERO
 var last_dir = Vector2.RIGHT
 var running = false
+export var shooting = false
 
 onready var anim_player = $anim
 
@@ -19,6 +20,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if shooting:
+		return
 	
 	running = Input.is_action_pressed('run')
 	

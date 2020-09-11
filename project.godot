@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Enemy",
+"class": "Animal",
+"language": "GDScript",
+"path": "res://resources/objects/abstract/animal.gd"
+}, {
 "base": "Node",
 "class": "AsepriteImportData",
 "language": "GDScript",
@@ -23,11 +28,42 @@ _global_script_classes=[ {
 "class": "EditorTheme",
 "language": "GDScript",
 "path": "res://addons/aseprite_importer/classes/EditorTheme.gd"
+}, {
+"base": "GameObject",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://resources/objects/abstract/enemy.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "GameObject",
+"language": "GDScript",
+"path": "res://resources/objects/abstract/gameobject.gd"
+}, {
+"base": "GameObject",
+"class": "ResourceObject",
+"language": "GDScript",
+"path": "res://resources/objects/abstract/resource.gd"
+}, {
+"base": "GameObject",
+"class": "Structure",
+"language": "GDScript",
+"path": "res://resources/objects/abstract/structure.gd"
+}, {
+"base": "ResourceObject",
+"class": "Wood",
+"language": "GDScript",
+"path": "res://resources/objects/tree.gd"
 } ]
 _global_script_class_icons={
+"Animal": "",
 "AsepriteImportData": "",
 "AsepriteImporter": "",
-"EditorTheme": ""
+"EditorTheme": "",
+"Enemy": "",
+"GameObject": "",
+"ResourceObject": "",
+"Structure": "",
+"Wood": ""
 }
 
 [application]

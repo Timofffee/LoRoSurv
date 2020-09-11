@@ -1,5 +1,5 @@
 { "frames": {
-   "Sprite-0001 0.": {
+   "player 0.aseprite": {
     "frame": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -7,7 +7,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 1.": {
+   "player 1.aseprite": {
     "frame": { "x": 8, "y": 0, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -15,7 +15,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 2.": {
+   "player 2.aseprite": {
     "frame": { "x": 16, "y": 0, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -23,7 +23,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 3.": {
+   "player 3.aseprite": {
     "frame": { "x": 24, "y": 0, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -31,7 +31,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 4.": {
+   "player 4.aseprite": {
     "frame": { "x": 0, "y": 8, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -39,7 +39,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 5.": {
+   "player 5.aseprite": {
     "frame": { "x": 8, "y": 8, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -47,7 +47,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 6.": {
+   "player 6.aseprite": {
     "frame": { "x": 16, "y": 8, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -55,7 +55,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 7.": {
+   "player 7.aseprite": {
     "frame": { "x": 24, "y": 8, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -63,7 +63,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 8.": {
+   "player 8.aseprite": {
     "frame": { "x": 0, "y": 16, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -71,7 +71,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 9.": {
+   "player 9.aseprite": {
     "frame": { "x": 8, "y": 16, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -79,7 +79,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 10.": {
+   "player 10.aseprite": {
     "frame": { "x": 16, "y": 16, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -87,7 +87,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 11.": {
+   "player 11.aseprite": {
     "frame": { "x": 24, "y": 16, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -95,7 +95,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 12.": {
+   "player 12.aseprite": {
     "frame": { "x": 0, "y": 24, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -103,7 +103,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 13.": {
+   "player 13.aseprite": {
     "frame": { "x": 8, "y": 24, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -111,7 +111,7 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 14.": {
+   "player 14.aseprite": {
     "frame": { "x": 16, "y": 24, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
@@ -119,13 +119,61 @@
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
    },
-   "Sprite-0001 15.": {
+   "player 15.aseprite": {
     "frame": { "x": 24, "y": 24, "w": 8, "h": 8 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
     "duration": 100
+   },
+   "player 16.aseprite": {
+    "frame": { "x": 0, "y": 32, "w": 8, "h": 8 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+    "sourceSize": { "w": 8, "h": 8 },
+    "duration": 100
+   },
+   "player 17.aseprite": {
+    "frame": { "x": 8, "y": 32, "w": 8, "h": 8 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+    "sourceSize": { "w": 8, "h": 8 },
+    "duration": 200
+   },
+   "player 18.aseprite": {
+    "frame": { "x": 16, "y": 32, "w": 8, "h": 8 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+    "sourceSize": { "w": 8, "h": 8 },
+    "duration": 200
+   },
+   "player 19.aseprite": {
+    "frame": { "x": 24, "y": 32, "w": 8, "h": 8 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+    "sourceSize": { "w": 8, "h": 8 },
+    "duration": 100
+   },
+   "player 20.aseprite": {
+    "frame": { "x": 0, "y": 40, "w": 8, "h": 8 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+    "sourceSize": { "w": 8, "h": 8 },
+    "duration": 200
+   },
+   "player 21.aseprite": {
+    "frame": { "x": 8, "y": 40, "w": 8, "h": 8 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+    "sourceSize": { "w": 8, "h": 8 },
+    "duration": 200
    }
  },
  "meta": {
@@ -133,17 +181,19 @@
   "version": "1.2.25-x64",
   "image": "player.png",
   "format": "RGBA8888",
-  "size": { "w": 32, "h": 32 },
+  "size": { "w": 32, "h": 48 },
   "scale": "1",
   "frameTags": [
    { "name": "walk_rd", "from": 0, "to": 3, "direction": "forward" },
    { "name": "idle_rd", "from": 0, "to": 0, "direction": "forward" },
    { "name": "walk_ld", "from": 4, "to": 7, "direction": "forward" },
    { "name": "idle_ld", "from": 4, "to": 4, "direction": "forward" },
-   { "name": "walk_ru", "from": 8, "to": 11, "direction": "forward" },
-   { "name": "idle_ru", "from": 8, "to": 8, "direction": "forward" },
-   { "name": "walk_lu", "from": 12, "to": 15, "direction": "forward" },
-   { "name": "idle_lu", "from": 12, "to": 12, "direction": "forward" }
+   { "name": "walk_lu", "from": 8, "to": 11, "direction": "forward" },
+   { "name": "idle_lu", "from": 8, "to": 8, "direction": "forward" },
+   { "name": "walk_ru", "from": 12, "to": 15, "direction": "forward" },
+   { "name": "idle_ru", "from": 12, "to": 12, "direction": "forward" },
+   { "name": "axe_rd", "from": 16, "to": 18, "direction": "forward" },
+   { "name": "axe_ld", "from": 19, "to": 21, "direction": "forward" }
   ],
   "layers": [
    { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
