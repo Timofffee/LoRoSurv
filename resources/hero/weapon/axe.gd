@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed('shoot') and get_parent().dir == Vector2.ZERO:
-		$ray.cast_to = get_parent().last_dir.normalized()*4
+		$ray.cast_to = Vector2(get_parent().last_dir.normalized().x * 4, 0)
 		yield(get_tree(), 'idle_frame')
 		if $ray.is_colliding():
 			var obj = $ray.get_collider()
