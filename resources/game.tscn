@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/game.gd" type="Script" id=1]
+[ext_resource path="res://resources/ui.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/world.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/day_night_cycle.tscn" type="PackedScene" id=4]
+
+[node name="Game" type="Node"]
+script = ExtResource( 1 )
+
+[node name="DayNightCycle" parent="." instance=ExtResource( 4 )]
+
+[node name="UI" parent="." instance=ExtResource( 2 )]
+
+[node name="World" parent="." instance=ExtResource( 3 )]
+
+[editable path="UI"]
