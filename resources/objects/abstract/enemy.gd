@@ -1,6 +1,8 @@
 extends GameObject
 class_name Enemy
 
+# Используется для вражеских объектов
+
 enum SEX {MALE, FEMALE, RND}
 const MAX_FEAR = 10
 const MIN_FEAR = 0

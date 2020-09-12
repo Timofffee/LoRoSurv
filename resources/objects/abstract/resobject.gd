@@ -1,6 +1,9 @@
 extends GameObject
 class_name ResObject
 
+# Используется для добываемых объектов
+# Деревья, каменные глыбы и т.д.
+
 signal part_mined(val)
 
 export(int) var step_mine = default_step_mine()

@@ -63,6 +63,18 @@ func set_minute(val):
 		emit_signal("new_minute", minute)
 
 
+func get_timestamp():
+	var timestamp = minute + ((hour + day * 24) * 60) + 0
+	return timestamp
+
+
+func get_day_timestamp():
+	var timestamp = minute + (hour * 60)
+	if minute == 0 and not hour == 0:
+		timestamp += 60
+	return timestamp
+
+
 func _on_DayNightCycle_timeout():
 	self.minute += 1
 
