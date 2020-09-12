@@ -1,0 +1,138 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://resources/ui/invetory_panel.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.345098 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0.67451, 1, 1 )
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[node name="Invetory" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -32.0
+margin_bottom = -2.0
+grow_vertical = 0
+custom_constants/separation = 2
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_1" type="Button" parent="HBoxContainer"]
+margin_left = 168.0
+margin_right = 200.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+
+[node name="Button_2" type="Button" parent="HBoxContainer"]
+margin_left = 202.0
+margin_right = 234.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+
+[node name="Button_3" type="Button" parent="HBoxContainer"]
+margin_left = 236.0
+margin_right = 268.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+
+[node name="Button_4" type="Button" parent="HBoxContainer"]
+margin_left = 270.0
+margin_right = 302.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+
+[node name="Button_5" type="Button" parent="HBoxContainer"]
+margin_left = 304.0
+margin_right = 336.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+
+[node name="Button_6" type="Button" parent="HBoxContainer"]
+margin_left = 338.0
+margin_right = 370.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+
+[node name="Button_7" type="Button" parent="HBoxContainer"]
+margin_left = 372.0
+margin_right = 404.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+
+[node name="Button_8" type="Button" parent="HBoxContainer"]
+margin_left = 406.0
+margin_right = 438.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+
+[node name="Button_9" type="Button" parent="HBoxContainer"]
+margin_left = 440.0
+margin_right = 472.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )

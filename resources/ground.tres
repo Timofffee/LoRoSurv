@@ -15,28 +15,28 @@ points = PoolVector2Array( 0, 4, 8, 4, 8, 8, 0, 8 )
 points = PoolVector2Array( 0, 0, 4, 0, 4, 8, 0, 8 )
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 4, 4, 4, 8, 4, 8, 0, 8, 0, 0, 8, 0, 8, 4 )
-
-[sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 4, 4, 0, 4, 0, 0, 8, 0, 8, 8, 4, 8 )
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 4, 0, 8, 0, 8, 8, 0, 8, 0, 4, 4, 4 )
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 4, 0, 4, 4, 8, 4, 8, 8, 0, 8, 0, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 8, 8, 4, 8, 8, 4 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 4, 4, 8, 0, 8 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 0, 4, 0, 0, 4, 0, 0, 4 )
 
-[sub_resource type="ConvexPolygonShape2D" id=12]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 4, 0, 8, 0, 8, 4 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 8, 0, 8, 4, 4, 4, 4, 8, 0, 8 )
 
 [resource]
 0/name = "tileset.png 0"
@@ -86,56 +86,56 @@ points = PoolVector2Array( 4, 0, 8, 0, 8, 4 )
 "shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 0, 0 ),
+"autotile_coord": Vector2( 2, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 2, 0 ),
+"autotile_coord": Vector2( 2, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 2, 2 ),
+"autotile_coord": Vector2( 0, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 0, 2 ),
+"autotile_coord": Vector2( 1, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 1, 3 ),
+"autotile_coord": Vector2( 2, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 2, 3 ),
+"autotile_coord": Vector2( 2, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 2, 4 ),
+"autotile_coord": Vector2( 1, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 1, 4 ),
+"autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
-1/name = "tileset.png 1"
+1/name = "water 1"
 1/texture = ExtResource( 1 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )

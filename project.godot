@@ -85,6 +85,7 @@ window/size/height=480
 window/size/test_width=1280
 window/size/test_height=960
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 

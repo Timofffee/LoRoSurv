@@ -1,9 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://resources/hero/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/map/tileset.png" type="Texture" id=2]
-[ext_resource path="res://resources/world.gd" type="Script" id=3]
+[ext_resource path="res://resources/objects/tree.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/hero/weapon/axe.gd" type="Script" id=4]
+[ext_resource path="res://resources/world.gd" type="Script" id=5]
+[ext_resource path="res://resources/objects/bison.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 8, 0, 8, 4, 0, 4 )
@@ -156,8 +158,8 @@ points = PoolVector2Array( 4, 0, 8, 0, 8, 4 )
 [sub_resource type="CircleShape2D" id=14]
 radius = 2.0
 
-[node name="Node" type="Node"]
-script = ExtResource( 3 )
+[node name="World" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="ground" type="TileMap" parent="."]
 tile_set = SubResource( 13 )
@@ -380,3 +382,9 @@ region_rect = Rect2( 56, 144, 8, 8 )
 
 [node name="col" type="CollisionShape2D" parent="objects/StaticBody2D10"]
 shape = SubResource( 14 )
+
+[node name="Tree" parent="objects" instance=ExtResource( 3 )]
+
+[node name="Bison" parent="objects" instance=ExtResource( 6 )]
+position = Vector2( 16, 0 )
+ground_tilemap = NodePath("../../ground")
