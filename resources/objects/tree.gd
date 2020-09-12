@@ -1,4 +1,4 @@
-extends ResourceObject
+extends ResObject
 class_name Wood
 
 

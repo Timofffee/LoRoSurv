@@ -8,7 +8,7 @@ export(int) var gives = 1
 
 
 func default_step_mine():
-	return 20 
+	return 20
 
 
 func mine():
