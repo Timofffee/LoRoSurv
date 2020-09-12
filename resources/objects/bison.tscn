@@ -7,5 +7,6 @@ sex = 2
 fear = -1
 
 [node name="Sprite" parent="." index="0"]
+offset = Vector2( 0, -4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 8, 8 )

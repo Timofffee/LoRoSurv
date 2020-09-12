@@ -4,11 +4,11 @@ class_name GameObject
 signal hp_changed(val)
 signal destroyed
 
-export(int) var hp = get_default_hp() setget set_hp
+export(int) var hp = get_max_hp() setget set_hp
 export(bool) var delete_on_destruction = true
 
 
-func get_default_hp():
+func get_max_hp():
 	return 100
 
 
@@ -22,4 +22,4 @@ func set_hp(val):
 
 
 func _ready():
-	pass
+	set_meta("default_hp", hp)
