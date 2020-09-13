@@ -1,12 +1,16 @@
 extends KinematicBody2D
 
-const SPEED = 20 #px/sec
-const RUN_SPEED = 30 
+const SPEED = 24 #px/sec
+const RUN_SPEED = 48
+const SPEED_DEADZONE = 2.0
 
 var dir = Vector2.ZERO
+var _dir = Vector2.ZERO
+
 var last_dir = Vector2.RIGHT
 var running = false
-export var shooting = false
+export(bool) var shooting = false
+export(bool) var is_sit = false
 
 onready var anim_player = $anim
 
@@ -36,16 +40,25 @@ func _process(delta: float) -> void:
 		if Input.is_action_pressed('move_left'):  dir.x -= 1
 		if Input.is_action_pressed('move_right'): dir.x += 1
 	
-	if dir != Vector2.ZERO:
-		last_dir = dir
-		move_and_slide(dir.normalized() * (RUN_SPEED if running else SPEED))
+	_dir = _dir.linear_interpolate(dir.normalized() * (RUN_SPEED if running else SPEED), delta*10)
+	
+	if _dir.length() > SPEED_DEADZONE:
+		last_dir = _dir
+		_dir = move_and_slide(_dir)
+	else:
+		_dir = Vector2.ZERO
 	
 	update_anim()
 
 
 func update_anim() -> void:
 	var d = last_dir
-	var prefix = "walk_" if dir != Vector2.ZERO else "idle_"
+	var prefix = "idle_"
+	if _dir.length() > 0:
+		if _dir.length() > SPEED + SPEED_DEADZONE:
+			prefix = "run_"
+		else:
+			prefix = "walk_"
 	var anim_dir = "rd"
 	
 	if d.y >= 0 and d.x >= 0:
@@ -62,7 +75,6 @@ func update_anim() -> void:
 
 
 func set_anim(anim_name):
-	anim_player.playback_speed = 0.7 if running else 0.5
 	if anim_player.current_animation != anim_name:
 		anim_player.play(anim_name)
 

@@ -47,7 +47,6 @@ func update_shadow(val):
 		shadow_node.width = shadow_width
 	
 	var timestamp = day_night_timer_node.get_day_timestamp()
-	print(timestamp/1000.0)
 	if $day_night_cycle_anim.current_animation!="": #fix "Condition'!Playback.current.from'is true."
 		$day_night_cycle_anim.seek(timestamp / 1000.0)
 
@@ -55,5 +54,6 @@ func update_shadow(val):
 func _ready():
 	if get_tree().current_scene.has_node('DayNightCycle'):
 		day_night_timer_node = get_tree().current_scene.get_node('DayNightCycle')
+		$day_night_cycle_anim.current_animation = "dn_cycle"
 		day_night_timer_node.connect('new_minute', self, 'update_shadow')
 	set_meta("default_hp", hp)
