@@ -23,10 +23,11 @@ func mine():
 		if picked_res_scene:
 			for i in gives:
 				var picked_res = picked_res_scene.instance()
-				picked_res.position = position + Vector2(
-						(randi() % 8) + (4 * GDHelpers.rnd_sign()), 
-						(randi() % 8) + (4 * GDHelpers.rnd_sign())
-				)
+				var r = clamp(4 * sqrt(randf()), 4, 4)
+				var theta = randf() * 2 * PI
+				var p = polar2cartesian(r, theta)
+				picked_res.position = position + p
+
 				get_parent().add_child(picked_res)
 			
 		emit_signal("part_mined", gives)
