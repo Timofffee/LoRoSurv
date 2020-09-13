@@ -413,13 +413,7 @@ position = Vector2( 80, 48 )
 
 [node name="Bison" parent="objects" instance=ExtResource( 6 )]
 position = Vector2( 16, 0 )
-hp = 0
-delete_on_destruction = true
 ground_tilemap = NodePath("../../ground")
-shadow_width = 2
-shadow_length = 10
-sex = 0
-fear = 10
 
 [node name="BigRock" parent="objects" instance=ExtResource( 7 )]
 position = Vector2( 24, 24 )
@@ -445,13 +439,6 @@ __meta__ = {
 
 [node name="Bison2" parent="objects" instance=ExtResource( 6 )]
 position = Vector2( 24, 64 )
-hp = 0
-delete_on_destruction = true
-ground_tilemap = NodePath("")
-shadow_width = 2
-shadow_length = 10
-sex = 0
-fear = 10
 
 [node name="Button3" type="Button" parent="objects/Bison2"]
 margin_right = 16.0
