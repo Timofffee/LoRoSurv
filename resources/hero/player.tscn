@@ -1,7 +1,8 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://resources/hero/player.png" type="Texture" id=1]
 [ext_resource path="res://resources/hero/player.gd" type="Script" id=2]
+[ext_resource path="res://resources/SimpleShadow.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 2.0
@@ -1241,6 +1242,7 @@ tracks/3/keys = {
 [node name="player" type="KinematicBody2D"]
 position = Vector2( 58, 37 )
 z_index = 1
+collision_mask = 14
 script = ExtResource( 2 )
 
 [node name="body" type="Sprite" parent="."]
@@ -1286,3 +1288,7 @@ anims/walk_ld = SubResource( 26 )
 anims/walk_lu = SubResource( 27 )
 anims/walk_rd = SubResource( 28 )
 anims/walk_ru = SubResource( 29 )
+
+[node name="SimpleShadow" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0.5, 0 )
+shadow_width = 3

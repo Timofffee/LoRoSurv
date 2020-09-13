@@ -4,4 +4,6 @@
 [ext_resource path="res://resources/objects/abstract/structure.gd" type="Script" id=2]
 
 [node name="Structure" instance=ExtResource( 1 )]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource( 2 )

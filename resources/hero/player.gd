@@ -9,6 +9,8 @@ var _dir = Vector2.ZERO
 
 var last_dir = Vector2.RIGHT
 var running = false
+enum STATE {IDLE, WALK, RUN, DO, SIT, MINE, SHOOT}
+export(int, "idle", "walk", "run", "do", "sit", "mine", "shoot") var state = 0
 export(bool) var shooting = false
 export(bool) var is_sit = false
 
@@ -24,7 +26,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if shooting:
+	if not state in [STATE.IDLE, STATE.WALK, STATE.RUN]:
 		return
 	
 	running = Input.is_action_pressed('run')
@@ -48,17 +50,28 @@ func _process(delta: float) -> void:
 	else:
 		_dir = Vector2.ZERO
 	
+	if _dir.length() > 0:
+		if _dir.length() > SPEED + SPEED_DEADZONE:
+			state = STATE.RUN
+		else:
+			state = STATE.WALK
+	else:
+		state = STATE.IDLE
+	
 	update_anim()
 
 
 func update_anim() -> void:
 	var d = last_dir
-	var prefix = "idle_"
-	if _dir.length() > 0:
-		if _dir.length() > SPEED + SPEED_DEADZONE:
-			prefix = "run_"
-		else:
+	var prefix = ""
+	match state:
+		STATE.WALK:
 			prefix = "walk_"
+		STATE.RUN:
+			prefix = "run_"
+		_:
+			prefix = "idle_"
+	
 	var anim_dir = "rd"
 	
 	if d.y >= 0 and d.x >= 0:
@@ -69,7 +82,6 @@ func update_anim() -> void:
 		anim_dir = "ru"
 	elif d.y <= 0 and d.x <= 0:
 		anim_dir = "lu"
-	
 	
 	set_anim(prefix + anim_dir)
 

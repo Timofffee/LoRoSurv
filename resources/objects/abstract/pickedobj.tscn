@@ -4,7 +4,9 @@
 [ext_resource path="res://resources/objects/abstract/pickedobj.gd" type="Script" id=2]
 
 [node name="PickedObj" instance=ExtResource( 1 )]
+collision_layer = 16
+collision_mask = 32
 script = ExtResource( 2 )
 
-[node name="Sprite" parent="." index="1"]
+[node name="Sprite" parent="." index="0"]
 scale = Vector2( 0.5, 0.5 )

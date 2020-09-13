@@ -1,9 +1,27 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://resources/game.gd" type="Script" id=1]
 [ext_resource path="res://resources/ui/ui.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/world.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/day_night_cycle.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "dn_cycle"
+length = 1.44
+loop = true
+step = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("abmient:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.18, 0.36, 0.53, 0.66, 0.8, 0.95, 1.12, 1.27, 1.44 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.113725, 0.121569, 0.129412, 1 ), Color( 0.113725, 0.121569, 0.129412, 1 ), Color( 0.384314, 0.415686, 0.431373, 1 ), Color( 0.854902, 0.85098, 0.764706, 1 ), Color( 1, 1, 0.976471, 1 ), Color( 1, 1, 0.976471, 1 ), Color( 1, 0.92549, 0.780392, 1 ), Color( 0.411765, 0.427451, 0.454902, 1 ), Color( 0.113725, 0.121569, 0.129412, 1 ), Color( 0.113725, 0.121569, 0.129412, 1 ) ]
+}
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
@@ -14,5 +32,13 @@ wait_time = 0.01
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
 [node name="World" parent="." instance=ExtResource( 3 )]
+
+[node name="dn_cycle_anim" type="AnimationPlayer" parent="."]
+autoplay = "dn_cycle"
+playback_speed = 0.0
+anims/dn_cycle = SubResource( 1 )
+
+[node name="abmient" type="CanvasModulate" parent="."]
+color = Color( 0.113725, 0.121569, 0.129412, 1 )
 
 [editable path="UI"]

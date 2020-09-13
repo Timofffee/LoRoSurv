@@ -11,13 +11,6 @@ export(bool) var delete_on_destruction = true
 
 export(NodePath) onready var ground_tilemap setget set_ground_tilemap
 
-# Shadows
-onready var shadow_node = $shadow
-export(int, 0, 128, 1) var shadow_width = 2
-export(int, 0, 128, 1) var shadow_length = 10
-onready var world = get_parent()
-var day_night_timer_node
-
 
 func set_ground_tilemap(val):
 	if typeof(val) in [TYPE_NODE_PATH, TYPE_STRING]:
@@ -40,20 +33,8 @@ func set_hp(val):
 			queue_free()
 
 
-func update_shadow(val):
-	if shadow_length != shadow_node.points[1].y:
-		shadow_node.points[1].y = -shadow_length
-	if shadow_width != shadow_node.width:
-		shadow_node.width = shadow_width
-	
-	var timestamp = day_night_timer_node.get_day_timestamp()
-	if $day_night_cycle_anim.current_animation!="": #fix "Condition'!Playback.current.from'is true."
-		$day_night_cycle_anim.seek(timestamp / 1000.0)
+
 
 
 func _ready():
-	if get_tree().current_scene.has_node('DayNightCycle'):
-		day_night_timer_node = get_tree().current_scene.get_node('DayNightCycle')
-		$day_night_cycle_anim.current_animation = "dn_cycle"
-		day_night_timer_node.connect('new_minute', self, 'update_shadow')
 	set_meta("default_hp", hp)

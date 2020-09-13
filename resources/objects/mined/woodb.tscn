@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://resources/objects/abstract/resobject.tscn" type="PackedScene" id=1]
 
+[sub_resource type="CircleShape2D" id=1]
+radius = 1.0
 
 [node name="WoodB" instance=ExtResource( 1 )]
 
@@ -9,3 +11,7 @@
 offset = Vector2( 0, -4 )
 region_enabled = true
 region_rect = Rect2( 88, 144, 8, 8 )
+
+[node name="col" parent="." index="1"]
+position = Vector2( 0, -1 )
+shape = SubResource( 1 )
