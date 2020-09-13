@@ -1,11 +1,14 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://resources/hero/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/map/tileset.png" type="Texture" id=2]
-[ext_resource path="res://resources/objects/tree.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/objects/mined/tree.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/hero/weapon/axe.gd" type="Script" id=4]
 [ext_resource path="res://resources/world.gd" type="Script" id=5]
-[ext_resource path="res://resources/objects/bison.tscn" type="PackedScene" id=6]
+[ext_resource path="res://resources/objects/enemies/bison.tscn" type="PackedScene" id=6]
+[ext_resource path="res://resources/objects/mined/bigrock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://resources/objects/mined/dead_bison.tscn" type="PackedScene" id=8]
+[ext_resource path="res://resources/cam.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 8, 0, 8, 4, 0, 4 )
@@ -158,6 +161,22 @@ points = PoolVector2Array( 4, 0, 8, 0, 8, 4 )
 [sub_resource type="CircleShape2D" id=14]
 radius = 2.0
 
+[sub_resource type="GDScript" id=15]
+script/source = "extends Button
+
+
+func _on_Button_pressed():
+	get_parent().mine()
+"
+
+[sub_resource type="GDScript" id=16]
+script/source = "extends Button
+
+
+func _on_Button_pressed():
+	get_parent().hp = 0
+"
+
 [node name="World" type="Node2D"]
 script = ExtResource( 5 )
 
@@ -184,6 +203,7 @@ cast_to = Vector2( 0, 4 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
+script = ExtResource( 9 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="objects"]
 position = Vector2( 86, 28 )
@@ -385,6 +405,61 @@ shape = SubResource( 14 )
 
 [node name="Tree" parent="objects" instance=ExtResource( 3 )]
 
+[node name="Tree2" parent="objects" instance=ExtResource( 3 )]
+position = Vector2( 32, 16 )
+
+[node name="Tree3" parent="objects" instance=ExtResource( 3 )]
+position = Vector2( 80, 48 )
+
 [node name="Bison" parent="objects" instance=ExtResource( 6 )]
 position = Vector2( 16, 0 )
+hp = 0
+delete_on_destruction = true
 ground_tilemap = NodePath("../../ground")
+shadow_width = 2
+shadow_length = 10
+sex = 0
+fear = 10
+
+[node name="BigRock" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 24, 24 )
+
+[node name="Button" type="Button" parent="objects/BigRock"]
+margin_right = 16.0
+margin_bottom = 20.0
+script = SubResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeadBison" parent="objects" instance=ExtResource( 8 )]
+position = Vector2( 56, 8 )
+
+[node name="Button2" type="Button" parent="objects/DeadBison"]
+margin_right = 16.0
+margin_bottom = 20.0
+script = SubResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bison2" parent="objects" instance=ExtResource( 6 )]
+position = Vector2( 24, 64 )
+hp = 0
+delete_on_destruction = true
+ground_tilemap = NodePath("")
+shadow_width = 2
+shadow_length = 10
+sex = 0
+fear = 10
+
+[node name="Button3" type="Button" parent="objects/Bison2"]
+margin_right = 16.0
+margin_bottom = 20.0
+script = SubResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="objects/BigRock/Button" to="objects/BigRock/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="objects/DeadBison/Button2" to="objects/DeadBison/Button2" method="_on_Button_pressed"]
+[connection signal="pressed" from="objects/Bison2/Button3" to="objects/Bison2/Button3" method="_on_Button_pressed"]

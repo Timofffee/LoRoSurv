@@ -15,7 +15,7 @@ export(NodePath) onready var ground_tilemap setget set_ground_tilemap
 onready var shadow_node = $shadow
 export(int, 0, 128, 1) var shadow_width = 2
 export(int, 0, 128, 1) var shadow_length = 10
-
+onready var world = get_parent()
 var day_night_timer_node
 
 

@@ -4,7 +4,7 @@
 
 [node name="Bush" instance=ExtResource( 1 )]
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite" parent="." index="1"]
 offset = Vector2( 0, -4 )
 region_enabled = true
 region_rect = Rect2( 56, 152, 8, 8 )

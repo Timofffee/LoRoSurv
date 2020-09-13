@@ -2,9 +2,12 @@
 
 [ext_resource path="res://resources/hero/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/ground.tres" type="TileSet" id=2]
-[ext_resource path="res://resources/objects/bison.tscn" type="PackedScene" id=3]
-[ext_resource path="res://resources/objects/tree_s.tscn" type="PackedScene" id=4]
-[ext_resource path="res://resources/objects/house.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resources/objects/enemies/bison.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/objects/mined/tree_s.tscn" type="PackedScene" id=4]
+[ext_resource path="res://resources/objects/structures/house.tscn" type="PackedScene" id=5]
+
+
+
 
 [node name="Node" type="Node"]
 

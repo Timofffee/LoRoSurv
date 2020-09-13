@@ -3,6 +3,8 @@ class_name Enemy
 
 # Используется для вражеских объектов
 
+export(PackedScene) onready var res_scene
+
 enum SEX {MALE, FEMALE, RND}
 const MAX_FEAR = 10
 const MIN_FEAR = 0
