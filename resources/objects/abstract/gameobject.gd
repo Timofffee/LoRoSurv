@@ -10,6 +10,8 @@ export(int) var hp = get_max_hp() setget set_hp
 export(bool) var delete_on_destruction = true
 
 export(NodePath) onready var ground_tilemap setget set_ground_tilemap
+onready var parent = get_parent()
+var day_night_timer_node
 
 
 func set_ground_tilemap(val):
@@ -19,6 +21,7 @@ func set_ground_tilemap(val):
 			ground_tilemap = get_node(val)
 	else:
 		ground_tilemap = val
+
 
 func get_max_hp():
 	return 100
@@ -33,8 +36,9 @@ func set_hp(val):
 			queue_free()
 
 
-
-
+func _enter_tree():
+	if get_tree().current_scene.has_node('DayNightCycle'):
+		day_night_timer_node = get_tree().current_scene.get_node('DayNightCycle')
 
 func _ready():
 	set_meta("default_hp", hp)

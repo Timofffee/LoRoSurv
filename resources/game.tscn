@@ -27,7 +27,7 @@ tracks/0/keys = {
 script = ExtResource( 1 )
 
 [node name="DayNightCycle" parent="." instance=ExtResource( 4 )]
-wait_time = 0.01
+wait_time = 0.1
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
