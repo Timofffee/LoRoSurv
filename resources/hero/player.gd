@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const SPEED = 24 #px/sec
-const RUN_SPEED = 48
+const SPEED = 16 #px/sec
+const RUN_SPEED = 32
 const SPEED_DEADZONE = 2.0
 
 var dir = Vector2.ZERO
@@ -11,8 +11,6 @@ var last_dir = Vector2.RIGHT
 var running = false
 enum STATE {IDLE, WALK, RUN, DO, SIT, MINE, SHOOT}
 export(int, "idle", "walk", "run", "do", "sit", "mine", "shoot") var state = 0
-export(bool) var shooting = false
-export(bool) var is_sit = false
 
 onready var anim_player = $anim
 
@@ -26,6 +24,18 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if state == STATE.IDLE:
+		if Input.is_action_just_pressed('sit'):
+			anim_player.play('sit_' + ('ld' if last_dir.x < 0 else 'rd'))
+			return
+		if Input.is_action_just_pressed('eat'):
+			anim_player.play('eating_' + ('ld' if last_dir.x < 0 else 'rd'))
+			return
+	if state == STATE.SIT:
+		if Input.is_action_just_pressed('sit'):
+			anim_player.play('stand_' + ('ld' if last_dir.x < 0 else 'rd'))
+			return
+	
 	if not state in [STATE.IDLE, STATE.WALK, STATE.RUN]:
 		return
 	

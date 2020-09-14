@@ -163,6 +163,7 @@ script = ExtResource( 5 )
 
 [node name="ground" type="TileMap" parent="."]
 light_mask = 3
+z_index = -2
 tile_set = SubResource( 13 )
 cell_size = Vector2( 8, 8 )
 occluder_light_mask = 3

@@ -949,7 +949,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 119.aseprite": {
     "frame": { "x": 56, "y": 56, "w": 8, "h": 8 },
@@ -957,7 +957,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 120.aseprite": {
     "frame": { "x": 64, "y": 56, "w": 8, "h": 8 },
@@ -965,7 +965,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 121.aseprite": {
     "frame": { "x": 72, "y": 56, "w": 8, "h": 8 },
@@ -973,7 +973,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 122.aseprite": {
     "frame": { "x": 80, "y": 56, "w": 8, "h": 8 },
@@ -981,7 +981,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 123.aseprite": {
     "frame": { "x": 88, "y": 56, "w": 8, "h": 8 },
@@ -997,7 +997,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 200
+    "duration": 100
    },
    "player 125.aseprite": {
     "frame": { "x": 104, "y": 56, "w": 8, "h": 8 },
@@ -1005,7 +1005,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 200
+    "duration": 300
    },
    "player 126.aseprite": {
     "frame": { "x": 112, "y": 56, "w": 8, "h": 8 },
@@ -1037,7 +1037,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 130.aseprite": {
     "frame": { "x": 16, "y": 64, "w": 8, "h": 8 },
@@ -1045,7 +1045,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 131.aseprite": {
     "frame": { "x": 24, "y": 64, "w": 8, "h": 8 },
@@ -1053,7 +1053,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 132.aseprite": {
     "frame": { "x": 32, "y": 64, "w": 8, "h": 8 },
@@ -1061,7 +1061,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 133.aseprite": {
     "frame": { "x": 40, "y": 64, "w": 8, "h": 8 },
@@ -1069,7 +1069,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 100
+    "duration": 200
    },
    "player 134.aseprite": {
     "frame": { "x": 48, "y": 64, "w": 8, "h": 8 },
@@ -1085,7 +1085,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 200
+    "duration": 100
    },
    "player 136.aseprite": {
     "frame": { "x": 64, "y": 64, "w": 8, "h": 8 },
@@ -1093,7 +1093,7 @@
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
     "sourceSize": { "w": 8, "h": 8 },
-    "duration": 200
+    "duration": 300
    },
    "player 137.aseprite": {
     "frame": { "x": 72, "y": 64, "w": 8, "h": 8 },
@@ -1278,12 +1278,12 @@
    { "name": "pick_ld", "from": 95, "to": 101, "direction": "forward" },
    { "name": "craft_rd", "from": 102, "to": 109, "direction": "forward" },
    { "name": "craft_ld", "from": 110, "to": 117, "direction": "forward" },
-   { "name": "eating_rb", "from": 118, "to": 128, "direction": "forward" },
+   { "name": "eating_rd", "from": 118, "to": 128, "direction": "forward" },
    { "name": "eating_ld", "from": 129, "to": 139, "direction": "forward" },
    { "name": "sit_rd", "from": 140, "to": 143, "direction": "forward" },
    { "name": "stand_rd", "from": 144, "to": 146, "direction": "forward" },
    { "name": "sit_ld", "from": 147, "to": 150, "direction": "forward" },
-   { "name": "stand_ls", "from": 151, "to": 153, "direction": "forward" }
+   { "name": "stand_ld", "from": 151, "to": 153, "direction": "forward" }
   ],
   "layers": [
    { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
