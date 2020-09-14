@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const SPEED = 16 #px/sec
 const RUN_SPEED = 32
-const SPEED_DEADZONE = 2.0
+const SPEED_DEADZONE = 0.1
 
 var dir = Vector2.ZERO
 var _dir = Vector2.ZERO
@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 	
 	update_velocity(delta)
 	update_anim()
-#	update()
+	update()
 
 
 func update_velocity(delta: float) -> void:
@@ -58,7 +58,7 @@ func update_velocity(delta: float) -> void:
 		if Input.is_action_pressed('move_left'):  dir.x -= 1
 		if Input.is_action_pressed('move_right'): dir.x += 1
 	
-	_dir = _dir.linear_interpolate(dir.normalized() * (RUN_SPEED if running else SPEED), delta*10)
+	_dir = _dir.linear_interpolate(dir.normalized() * (RUN_SPEED if running else SPEED), 1.0)
 	
 	if _dir.length() > SPEED_DEADZONE:
 		last_dir = _dir
@@ -123,5 +123,5 @@ func _change_joy_state(id, connected) -> void:
 			joys.remove(id)
 
 
-#func _draw() -> void:
-#	draw_line(Vector2.ZERO, last_dir, Color(0.8, 0.1, 0.5))
+func _draw() -> void:
+	draw_line(Vector2.ZERO, _dir, Color(0.8, 0.1, 0.5))

@@ -72,7 +72,7 @@ func _ready():
 			else:
 				coast_points.append(cell)
 
-	noise.seed = 0
+	noise.seed = 1
 	noise.octaves = 4
 	noise.period = 16
 	

@@ -84,6 +84,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://resources/objects/abstract/structure.gd"
 }, {
+"base": "Node2D",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://resources/hero/Weapon.gd"
+}, {
 "base": "ResObject",
 "class": "Wood",
 "language": "GDScript",
@@ -105,6 +110,7 @@ _global_script_class_icons={
 "ResObject": "",
 "State": "res://addons/node_fsm_plugin/state_icon.svg",
 "Structure": "",
+"Weapon": "",
 "Wood": ""
 }
 
@@ -193,18 +199,5 @@ eat={
 [rendering]
 
 quality/driver/driver_name="GLES2"
-quality/intended_usage/framebuffer_allocation=1
-quality/intended_usage/framebuffer_allocation.mobile=1
 quality/2d/use_pixel_snap=true
-threads/thread_model=2
-quality/directional_shadow/size=256
-quality/directional_shadow/size.mobile=256
-quality/shadow_atlas/size=256
-quality/shadows/filter_mode=0
-quality/reflections/high_quality_ggx=false
-quality/shading/force_vertex_shading.mobile=false
-quality/shading/force_lambert_over_burley.mobile=false
-quality/shading/force_blinn_over_ggx.mobile=false
-quality/depth/hdr=false
 environment/default_environment="res://default_env.tres"
-quality/dynamic_fonts/use_oversampling=false
