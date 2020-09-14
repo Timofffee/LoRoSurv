@@ -1,6 +1,7 @@
 extends Node
 
 var coast_points = []
+var spawned_objects = {}
 
 var noise = OpenSimplexNoise.new()
 
@@ -71,7 +72,7 @@ func _ready():
 			else:
 				coast_points.append(cell)
 
-	noise.seed = randi()
+	noise.seed = 0
 	noise.octaves = 4
 	noise.period = 16
 	

@@ -12,7 +12,7 @@ export(int) var gives = 1
 export(PackedScene) onready var picked_res_scene
 
 enum MINE_TYPE {AXE, PICKAXE, OTHER}
-export(int, "axe", "pickaxe", "other") var mine_type = 2
+export(MINE_TYPE) var mine_type = 2
 
 func default_step_mine():
 	return 20
@@ -37,3 +37,4 @@ func mine():
 
 func _ready():
 	randomize()
+

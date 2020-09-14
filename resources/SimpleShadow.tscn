@@ -1,6 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://resources/SimpleShadow.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=3]
+max_value = 0.5
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 1, Vector2( 0.252577, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.489691, 0.5 ), 0.0, 0.0, 0, 0, Vector2( 0.747423, 0 ), -4.089, 0.0, 0, 1, Vector2( 1, 0 ), 0.0, 0.0, 1, 0 ]
+
+[sub_resource type="Curve" id=4]
+min_value = 1.0
+max_value = 10.0
+_data = [ Vector2( 0, 10 ), 0.0, -60.1082, 0, 0, Vector2( 0.381443, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 10 ), 42.9344, 0.0, 0, 0 ]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.290323, 1 )
@@ -10,49 +19,12 @@ colors = PoolColorArray( 1, 0.768627, 0.768627, 1, 1, 0.617511, 0.430715, 0.4307
 gradient = SubResource( 1 )
 width = 100
 
-[sub_resource type="Animation" id=3]
-length = 1.44
-loop = true
-step = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.44 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, -360.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.72, 1.44 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 0.1 ), Vector2( 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("shadow:energy")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.32, 0.56, 0.9, 1.08, 1.44 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.5, 0.5, 0.0, 0.0 ]
-}
-
 [node name="SimpleShadow" type="Node2D"]
+rotation = -3.57793
+scale = Vector2( 1, 0.225 )
 script = ExtResource( 1 )
+energy = SubResource( 3 )
+length = SubResource( 4 )
 
 [node name="shadow" type="Light2D" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -60,10 +32,6 @@ show_behind_parent = true
 rotation = -1.5708
 texture = SubResource( 2 )
 offset = Vector2( 49, 0 )
-energy = 0.0
+energy = 0.5
 mode = 1
 range_item_cull_mask = 2
-
-[node name="anim" type="AnimationPlayer" parent="."]
-playback_speed = 0.0
-anims/dn_cycle = SubResource( 3 )

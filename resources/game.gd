@@ -14,7 +14,6 @@ func _ready():
 
 func update_ambient(val):
 	
-	var timestamp = day_night_cycle.get_day_timestamp()
 	if $dn_cycle_anim.current_animation!="": #fix "Condition'!Playback.current.from'is true."
-		$dn_cycle_anim.seek(timestamp / 1000.0)
+		$dn_cycle_anim.seek(day_night_cycle.day_timestamp / 1000.0)
 	

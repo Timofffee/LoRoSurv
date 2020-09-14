@@ -10,7 +10,7 @@ var _dir = Vector2.ZERO
 var last_dir = Vector2.RIGHT
 var running = false
 enum STATE {IDLE, WALK, RUN, DO, SIT, MINE, SHOOT}
-export(int, "idle", "walk", "run", "do", "sit", "mine", "shoot") var state = 0
+export(STATE) var state = 0
 
 onready var anim_player = $anim
 

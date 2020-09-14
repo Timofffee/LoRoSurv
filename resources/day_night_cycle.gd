@@ -21,6 +21,8 @@ var hour = 0 setget set_hour
 var minute = 0 setget set_minute
 var quarter = QUATERS.NIGHT setget set_quater
 
+var timestamp = 0
+var day_timestamp = 0
 
 func set_quater(val, emitter=null):
 	quarter = val
@@ -61,18 +63,17 @@ func set_minute(val):
 	else:
 		minute = val
 		emit_signal("new_minute", minute)
+	
+	update_timestamp()
+	update_day_timestamp()
 
 
-func get_timestamp():
-	var timestamp = minute + ((hour + day * 24) * 60) + 0
-	return timestamp
+func update_timestamp():
+	timestamp = minute + ((hour + day * 24) * 60)
 
 
-func get_day_timestamp():
-	var timestamp = minute + (hour * 60)
-	if minute == 0 and not hour == 0:
-		timestamp += 60
-	return timestamp
+func update_day_timestamp():
+	day_timestamp = minute + (hour * 60)
 
 
 func _on_DayNightCycle_timeout():
