@@ -80,7 +80,8 @@ func _ready():
 			var h = noise.get_noise_2d(x+51, y+51)
 			if h > 0.1 and h < 0.3 and $ground.get_cell(x, y) == 0 \
 					and $ground.get_cell_autotile_coord(x, y) == Vector2(1,1):
-				var t = objects['trees'][0].instance()
+				
+				var t = objects['trees'][0 if h < 0.2 else 1].instance()
 				t.position = $ground.map_to_world(Vector2(x,y)) + Vector2(randi()%6, randi()%6)
 				$objects.add_child(t)
 	

@@ -24,16 +24,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/aseprite_importer/classes/AsepriteImporter.gd"
 }, {
-"base": "Node",
-"class": "BaseCoin",
-"language": "GDScript",
-"path": "res://fsm_demo/entities/coin/scripts/base_coin.gd"
-}, {
-"base": "BaseCoin",
-"class": "Coin",
-"language": "GDScript",
-"path": "res://fsm_demo/entities/coin/scripts/coin.gd"
-}, {
 "base": "Timer",
 "class": "DayNightCycle",
 "language": "GDScript",
@@ -79,11 +69,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://resources/objects/abstract/pickedobj.gd"
 }, {
-"base": "KinematicBody2D",
-"class": "Player",
-"language": "GDScript",
-"path": "res://fsm_demo/entities/player/scripts/player.gd"
-}, {
 "base": "GameObject",
 "class": "ResObject",
 "language": "GDScript",
@@ -108,8 +93,6 @@ _global_script_class_icons={
 "Animal": "",
 "AsepriteImportData": "",
 "AsepriteImporter": "",
-"BaseCoin": "",
-"Coin": "",
 "DayNightCycle": "",
 "EditorTheme": "",
 "Enemy": "",
@@ -119,7 +102,6 @@ _global_script_class_icons={
 "Inventory": "",
 "Item": "",
 "PickedObj": "",
-"Player": "",
 "ResObject": "",
 "State": "res://addons/node_fsm_plugin/state_icon.svg",
 "Structure": "",
@@ -143,7 +125,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "aseprite_importer", "node_fsm_plugin" )
+enabled=PoolStringArray( "aseprite_importer" )
 
 [input]
 
@@ -194,21 +176,6 @@ pick={
 eat={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":82,"unicode":0,"echo":false,"script":null)
- ]
-}
-cam_zoom_in={
-"deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
- ]
-}
-cam_zoom_out={
-"deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
- ]
-}
-cam_drag={
-"deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 
