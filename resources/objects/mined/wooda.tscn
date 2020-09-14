@@ -1,17 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://resources/objects/abstract/resobject.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/objects/picked/log.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 1.0
 
 [node name="WoodA" instance=ExtResource( 1 )]
+picked_res_scene = ExtResource( 2 )
+mine_type = 0
 
 [node name="Sprite" parent="." index="0"]
-offset = Vector2( 0, -4 )
+offset = Vector2( 0, -3 )
 region_enabled = true
 region_rect = Rect2( 80, 144, 8, 8 )
 
 [node name="col" parent="." index="1"]
-position = Vector2( 0, -1 )
 shape = SubResource( 1 )

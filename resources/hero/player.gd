@@ -39,6 +39,12 @@ func _process(delta: float) -> void:
 	if not state in [STATE.IDLE, STATE.WALK, STATE.RUN]:
 		return
 	
+	update_velocity(delta)
+	update_anim()
+#	update()
+
+
+func update_velocity(delta: float) -> void:
 	running = Input.is_action_pressed('run')
 	
 	dir = Vector2(Input.get_joy_axis(0, 0), Input.get_joy_axis(0, 1))
@@ -67,8 +73,6 @@ func _process(delta: float) -> void:
 			state = STATE.WALK
 	else:
 		state = STATE.IDLE
-	
-	update_anim()
 
 
 func update_anim() -> void:
@@ -100,6 +104,7 @@ func set_anim(anim_name):
 	if anim_player.current_animation != anim_name:
 		anim_player.play(anim_name)
 
+		
 func instance_trace() -> void:
 	var t = trace_inst.instance()
 	get_parent().add_child(t)
@@ -116,3 +121,7 @@ func _change_joy_state(id, connected) -> void:
 	else:
 		if joys.has(id):
 			joys.remove(id)
+
+
+#func _draw() -> void:
+#	draw_line(Vector2.ZERO, last_dir, Color(0.8, 0.1, 0.5))

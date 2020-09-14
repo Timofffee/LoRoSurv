@@ -12,10 +12,9 @@ picked_res_scene = ExtResource( 3 )
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 1 )
-offset = Vector2( 0, -4 )
+offset = Vector2( 0, -3 )
 region_enabled = true
-region_rect = Rect2( 24, 0, 8, 8 )
+region_rect = Rect2( 0, 24, 8, 8 )
 
 [node name="col" parent="." index="1"]
-position = Vector2( 0, -1 )
 shape = SubResource( 1 )
