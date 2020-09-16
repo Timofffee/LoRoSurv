@@ -217,10 +217,6 @@ cam_drag={
 2d_physics/layer_6="can_mine"
 2d_physics/layer_7="can_damage"
 
-[physics]
-
-2d/thread_model=2
-
 [rendering]
 
 quality/driver/driver_name="GLES2"

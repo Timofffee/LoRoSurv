@@ -14,6 +14,7 @@ func _ready() -> void:
 	ray.collide_with_areas = true
 	ray.enabled = true
 	ray.position.y = -2
+	ray.cast_to = Vector2.ZERO
 
 
 func _process(delta: float) -> void:

@@ -137,7 +137,6 @@ func free_region(pos) -> void:
 		c.queue_free()
 		yield(get_tree(), 'idle_frame')
 	active_regions.erase(pos)
-	pass
 
 
 func update_region(pos) -> void:
