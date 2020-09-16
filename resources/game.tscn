@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://resources/game.gd" type="Script" id=1]
 [ext_resource path="res://resources/ui/ui.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/world.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/day_night_cycle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://resources/InGameCamera.gd" type="Script" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "dn_cycle"
@@ -40,5 +41,12 @@ anims/dn_cycle = SubResource( 1 )
 
 [node name="abmient" type="CanvasModulate" parent="."]
 color = Color( 0.113725, 0.121569, 0.129412, 1 )
+
+[node name="InGameCamera" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+smoothing_enabled = true
+smoothing_speed = 10.0
+script = ExtResource( 5 )
 
 [editable path="UI"]

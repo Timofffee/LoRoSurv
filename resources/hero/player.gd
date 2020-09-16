@@ -21,6 +21,9 @@ var joys = []
 func _ready() -> void:
 	joys = Input.get_connected_joypads()
 	Input.connect('joy_connection_changed', self, '_change_joy_state')
+	
+	if get_tree().current_scene.has_node('InGameCamera'):
+		get_tree().current_scene.get_node('InGameCamera').target = self
 
 
 func _process(delta: float) -> void:
@@ -62,6 +65,7 @@ func update_velocity(delta: float) -> void:
 	
 	if _dir.length() > SPEED_DEADZONE:
 		last_dir = _dir
+		# fucken bug?
 		_dir = move_and_slide(_dir)
 	else:
 		_dir = Vector2.ZERO

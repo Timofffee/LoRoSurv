@@ -54,6 +54,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://resources/objects/abstract/gameobject.gd"
 }, {
+"base": "Camera2D",
+"class": "InGameCamera",
+"language": "GDScript",
+"path": "res://resources/InGameCamera.gd"
+}, {
 "base": "Reference",
 "class": "Inventory",
 "language": "GDScript",
@@ -104,6 +109,7 @@ _global_script_class_icons={
 "FSM": "res://addons/node_fsm_plugin/fsm_icon.svg",
 "GDHelpers": "",
 "GameObject": "",
+"InGameCamera": "",
 "Inventory": "",
 "Item": "",
 "PickedObj": "",

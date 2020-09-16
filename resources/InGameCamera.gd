@@ -1,4 +1,5 @@
 extends Camera2D
+class_name InGameCamera
 
 const MAX_ZOOM_LEVEL = 0.1
 const MIN_ZOOM_LEVEL = 4.0
@@ -6,9 +7,23 @@ const ZOOM_INCREMENT = 0.05
 
 signal moved()
 signal zoomed()
+signal change_target(new_target)
 
 var _current_zoom_level = 1
 var _drag = false
+
+var target = null setget set_target
+
+
+func set_target(val) -> void:
+	target = val
+	emit_signal('change_target', val)
+
+
+func _process(delta: float) -> void:
+	if target:
+		global_position = target.global_position
+
 
 func _input(event):
 	if event.is_action_pressed("cam_drag"):
